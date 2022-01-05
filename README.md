@@ -1,7 +1,7 @@
 #Minecraft Utility
 ### Libraries: mcstatus, pyqtgraph, pyqt5, requests, datetime, json, os, sys
 
-![app image](https://github.com/g-ulrich/pyqt5-mcstatus/blob/main/images/app.png)
+![app image](https://github.com/g-ulrich/pyqt5-mcstatus/blob/main/images/app.PNG)
 
 ### Description:
 This single page pyqt5 based app offers current and historical data on players in any given minecraft server (java edition). Enter a valid server URL/ip and discord webhook url for full functionality. 
