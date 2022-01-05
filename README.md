@@ -12,4 +12,5 @@ The webhook and server entries are optional, but the app would not have much pur
 - Player historical data is updated every 5 minutes.
 - If there are zero players online discord will not be updated.
 - Logs will clear every 200 items.
-- all data is saved to the file pyqt5-mcstatus.json
+- All data is saved to the file pyqt5-mcstatus.json
+- The .EXE will be in the dist directory. (Downloading the exe will result in your browser complaining, if you want this app ignore the complaints. I did not include a certificate authority.)
