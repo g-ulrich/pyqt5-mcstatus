@@ -6,53 +6,164 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>660</width>
-    <height>546</height>
+    <width>745</width>
+    <height>611</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Minecraft Utility</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
     <string notr="true">#centralwidget {
-
-	background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:0.909, y2:0.852955, stop:0 rgba(214, 214, 214, 255), stop:1 rgba(235, 235, 235, 255));
+	
+	background-image: url(:/root/images/pillar.png);
 }
 
-
-QGroupBox {
-padding-top: 15px;
+#title {
+	font-size: 30px;
 }
 
-QFrame, QGroupBox, QDoubleSpinBox {
-border-radius: 3px;
-font-size: 20px;
-	color: rgb(35, 35, 35);
+QPushButton {
+font-size: 15px;
+font-weight: bold;
+	color: #fff;
+	padding : 5px 10px;
+	border-radius: 10px;
+	background-color: rgb(0, 170, 0);
+	border-top: 1px solid rgba(255, 255, 255, 0);
+	border-right: 1px solid rgba(255, 255, 255, 0);
+	border-left: 1px solid rgba(255, 255, 255, 255);
+	border-bottom: 1px solid rgba(255, 255, 255, 255);
+}
+
+QPushButton:hover {
+	background-color: rgb(0, 150, 0);
+}
+
+QPushButton:pressed {
+	background-color: rgb(0, 170, 0);
+	border: none;
+}
+
+#minecraft_icon {
+	
+	image: url(:/root/images/creep.png);
+	min-height: 50px;
+min-width: 50px;
+
+}
+
+QFrame, QGroupBox, QDoubleSpinBox, QCheckBox {
+font-size: 15px;
+font-weight: bold;
+	color: #fff;
 }
 
 QLabel {
 border: None;
 }
-</string>
+
+
+QGroupBox, QFrame, QLabel, QDoubleSpinBox, QListWidget, QLineEdit {
+border-radius: 3px;
+padding: 3px;
+}
+
+QDoubleSpinBox, QListWidget, QLineEdit {
+color:#000;
+	background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:0.909, y2:0.852955, stop:0 rgba(214, 214, 214, 255), stop:1 rgba(241, 241, 241, 255));
+}
+
+
+QGroupBox {
+padding-top: 20px;
+}
+
+
+QCheckBox::indicator {
+	width: 20px;
+	height: 20px;
+}
+
+QCheckBox::indicator:unchecked {
+	image: url(:/root/images/unchecked.png);
+}
+
+QCheckBox::indicator:checked {
+		image: url(:/root/images/checked.png);
+}</string>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
     <item>
-     <widget class="QFrame" name="frame">
+     <widget class="QFrame" name="frame_header">
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
       </property>
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="0,100">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="minecraft_icon">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
        <item>
         <widget class="QLabel" name="title">
+         <property name="font">
+          <font>
+           <pointsize>-1</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="text">
           <string>Minecraft Utility</string>
          </property>
         </widget>
        </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="frame_9">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_10" stretch="">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
       </layout>
      </widget>
     </item>
@@ -65,15 +176,87 @@ border: None;
        <enum>QFrame::Raised</enum>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_6">
+       <property name="topMargin">
+        <number>0</number>
+       </property>
        <item>
-        <widget class="QLabel" name="label_9">
-         <property name="text">
-          <string>Server Address:</string>
+        <widget class="QFrame" name="frame_10">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
          </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <widget class="QLabel" name="label_9">
+            <property name="text">
+             <string>Server Address:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="edit_server_address"/>
+          </item>
+         </layout>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="edit_server_address"/>
+        <widget class="QFrame" name="frame_11">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>Discord Webhook:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="edit_discord_webhook"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame_12">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_6">
+          <item>
+           <widget class="QCheckBox" name="check_send_logs">
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string>Send Logs</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btn_submit">
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string>Submit</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
        </item>
       </layout>
      </widget>
@@ -87,39 +270,22 @@ border: None;
        <enum>QFrame::Raised</enum>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout">
-       <item>
-        <widget class="QLabel" name="label">
-         <property name="text">
-          <string>Discord Webhook:</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="edit_discord_webhook"/>
-       </item>
-       <item>
-        <widget class="QCheckBox" name="check_send_logs">
-         <property name="text">
-          <string>Send Logs</string>
-         </property>
-         <property name="checked">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item>
-     <widget class="QGroupBox" name="groupBox_3">
-      <property name="title">
-       <string>Portal Calculator</string>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_7">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
        <item>
         <widget class="QGroupBox" name="groupBox">
          <property name="title">
-          <string>Overworld</string>
+          <string> Overworld Portal</string>
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="0,50,0,50">
           <item>
@@ -131,6 +297,9 @@ border: None;
           </item>
           <item>
            <widget class="QDoubleSpinBox" name="line_overworld_x">
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
             <property name="minimum">
              <double>-999999.000000000000000</double>
             </property>
@@ -148,6 +317,9 @@ border: None;
           </item>
           <item>
            <widget class="QDoubleSpinBox" name="line_overworld_z">
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
             <property name="minimum">
              <double>-999999.000000000000000</double>
             </property>
@@ -162,7 +334,7 @@ border: None;
        <item>
         <widget class="QGroupBox" name="groupBox_2">
          <property name="title">
-          <string>Nether</string>
+          <string>Nether Portal</string>
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="0,50,0,50">
           <item>
@@ -174,6 +346,9 @@ border: None;
           </item>
           <item>
            <widget class="QDoubleSpinBox" name="line_nether_x">
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
             <property name="minimum">
              <double>-999999.000000000000000</double>
             </property>
@@ -191,6 +366,9 @@ border: None;
           </item>
           <item>
            <widget class="QDoubleSpinBox" name="line_nether_z">
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
             <property name="minimum">
              <double>-999999.000000000000000</double>
             </property>
@@ -213,30 +391,79 @@ border: None;
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout_2">
+      <layout class="QHBoxLayout" name="horizontalLayout_8" stretch="50,50">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
        <item>
-        <widget class="QFrame" name="frame_3">
+        <widget class="QFrame" name="frame_6">
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
          </property>
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
-         <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <layout class="QVBoxLayout" name="verticalLayout_3" stretch="0,100">
           <item>
-           <widget class="QLabel" name="label_8">
-            <property name="text">
-             <string>Log</string>
+           <widget class="QFrame" name="frame_3">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
             </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_log">
+               <property name="text">
+                <string>Logs</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_timestamp">
+               <property name="text">
+                <string>00:00:00pm</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
            </widget>
           </item>
           <item>
-           <widget class="QLabel" name="label_timestamp">
-            <property name="text">
-             <string>00:00:00pm</string>
+           <widget class="QListWidget" name="log">
+            <property name="cursor" stdset="0">
+             <cursorShape>IBeamCursor</cursorShape>
             </property>
-            <property name="alignment">
-             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            <property name="wordWrap">
+             <bool>true</bool>
             </property>
            </widget>
           </item>
@@ -244,7 +471,67 @@ border: None;
         </widget>
        </item>
        <item>
-        <widget class="QListWidget" name="log"/>
+        <widget class="QFrame" name="frame_7">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,100">
+          <item>
+           <widget class="QFrame" name="frame_8">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_9">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_users">
+               <property name="text">
+                <string>Players</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_timestamp_users">
+               <property name="text">
+                <string>00:00:00pm</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="PlotWidget" name="frame_graph">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
        </item>
       </layout>
      </widget>
@@ -252,6 +539,14 @@ border: None;
    </layout>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PlotWidget</class>
+   <extends>QFrame</extends>
+   <header location="global">pyqtgraph</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="resources.qrc"/>
  </resources>

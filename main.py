@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'C:\desktop2\projects\pyqt5\mcstatus\main.ui'
+# Form implementation generated from reading ui file 'C:\desktop2\projects\pyqt5\pyqt5-mcstatus\main.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.2
 #
@@ -14,76 +14,177 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(660, 546)
+        MainWindow.resize(745, 611)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setStyleSheet("#centralwidget {\n"
-"\n"
-"    background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:0.909, y2:0.852955, stop:0 rgba(214, 214, 214, 255), stop:1 rgba(235, 235, 235, 255));\n"
+"    \n"
+"    background-image: url(:/root/images/pillar.png);\n"
 "}\n"
 "\n"
-"\n"
-"QGroupBox {\n"
-"padding-top: 15px;\n"
+"#title {\n"
+"    font-size: 30px;\n"
 "}\n"
 "\n"
-"QFrame, QGroupBox, QDoubleSpinBox {\n"
-"border-radius: 3px;\n"
-"font-size: 20px;\n"
-"    color: rgb(35, 35, 35);\n"
+"QPushButton {\n"
+"font-size: 15px;\n"
+"font-weight: bold;\n"
+"    color: #fff;\n"
+"    padding : 5px 10px;\n"
+"    border-radius: 10px;\n"
+"    background-color: rgb(0, 170, 0);\n"
+"    border-top: 1px solid rgba(255, 255, 255, 0);\n"
+"    border-right: 1px solid rgba(255, 255, 255, 0);\n"
+"    border-left: 1px solid rgba(255, 255, 255, 255);\n"
+"    border-bottom: 1px solid rgba(255, 255, 255, 255);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(0, 150, 0);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(0, 170, 0);\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"#minecraft_icon {\n"
+"    \n"
+"    image: url(:/root/images/creep.png);\n"
+"    min-height: 50px;\n"
+"min-width: 50px;\n"
+"\n"
+"}\n"
+"\n"
+"QFrame, QGroupBox, QDoubleSpinBox, QCheckBox {\n"
+"font-size: 15px;\n"
+"font-weight: bold;\n"
+"    color: #fff;\n"
 "}\n"
 "\n"
 "QLabel {\n"
 "border: None;\n"
 "}\n"
-"")
+"\n"
+"\n"
+"QGroupBox, QFrame, QLabel, QDoubleSpinBox, QListWidget, QLineEdit {\n"
+"border-radius: 3px;\n"
+"padding: 3px;\n"
+"}\n"
+"\n"
+"QDoubleSpinBox, QListWidget, QLineEdit {\n"
+"color:#000;\n"
+"    background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:0.909, y2:0.852955, stop:0 rgba(214, 214, 214, 255), stop:1 rgba(241, 241, 241, 255));\n"
+"}\n"
+"\n"
+"\n"
+"QGroupBox {\n"
+"padding-top: 20px;\n"
+"}\n"
+"\n"
+"\n"
+"QCheckBox::indicator {\n"
+"    width: 20px;\n"
+"    height: 20px;\n"
+"}\n"
+"\n"
+"QCheckBox::indicator:unchecked {\n"
+"    image: url(:/root/images/unchecked.png);\n"
+"}\n"
+"\n"
+"QCheckBox::indicator:checked {\n"
+"        image: url(:/root/images/checked.png);\n"
+"}")
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.centralwidget)
+        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout.setObjectName("verticalLayout")
-        self.frame = QtWidgets.QFrame(self.centralwidget)
-        self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame.setObjectName("frame")
-        self.horizontalLayout_3 = QtWidgets.QHBoxLayout(self.frame)
+        self.frame_header = QtWidgets.QFrame(self.centralwidget)
+        self.frame_header.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_header.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_header.setObjectName("frame_header")
+        self.horizontalLayout_3 = QtWidgets.QHBoxLayout(self.frame_header)
+        self.horizontalLayout_3.setSpacing(0)
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
-        self.title = QtWidgets.QLabel(self.frame)
+        self.minecraft_icon = QtWidgets.QLabel(self.frame_header)
+        self.minecraft_icon.setText("")
+        self.minecraft_icon.setObjectName("minecraft_icon")
+        self.horizontalLayout_3.addWidget(self.minecraft_icon)
+        self.title = QtWidgets.QLabel(self.frame_header)
+        font = QtGui.QFont()
+        font.setPointSize(-1)
+        font.setBold(True)
+        font.setWeight(75)
+        self.title.setFont(font)
         self.title.setObjectName("title")
         self.horizontalLayout_3.addWidget(self.title)
-        self.verticalLayout.addWidget(self.frame)
+        self.horizontalLayout_3.setStretch(1, 100)
+        self.verticalLayout.addWidget(self.frame_header)
+        self.frame_9 = QtWidgets.QFrame(self.centralwidget)
+        self.frame_9.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_9.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_9.setObjectName("frame_9")
+        self.horizontalLayout_10 = QtWidgets.QHBoxLayout(self.frame_9)
+        self.horizontalLayout_10.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_10.setObjectName("horizontalLayout_10")
+        self.verticalLayout.addWidget(self.frame_9)
         self.frame_5 = QtWidgets.QFrame(self.centralwidget)
         self.frame_5.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_5.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_5.setObjectName("frame_5")
         self.horizontalLayout_6 = QtWidgets.QHBoxLayout(self.frame_5)
+        self.horizontalLayout_6.setContentsMargins(-1, 0, -1, -1)
         self.horizontalLayout_6.setObjectName("horizontalLayout_6")
-        self.label_9 = QtWidgets.QLabel(self.frame_5)
+        self.frame_10 = QtWidgets.QFrame(self.frame_5)
+        self.frame_10.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_10.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_10.setObjectName("frame_10")
+        self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.frame_10)
+        self.verticalLayout_4.setObjectName("verticalLayout_4")
+        self.label_9 = QtWidgets.QLabel(self.frame_10)
         self.label_9.setObjectName("label_9")
-        self.horizontalLayout_6.addWidget(self.label_9)
-        self.edit_server_address = QtWidgets.QLineEdit(self.frame_5)
+        self.verticalLayout_4.addWidget(self.label_9)
+        self.edit_server_address = QtWidgets.QLineEdit(self.frame_10)
         self.edit_server_address.setObjectName("edit_server_address")
-        self.horizontalLayout_6.addWidget(self.edit_server_address)
+        self.verticalLayout_4.addWidget(self.edit_server_address)
+        self.horizontalLayout_6.addWidget(self.frame_10)
+        self.frame_11 = QtWidgets.QFrame(self.frame_5)
+        self.frame_11.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_11.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_11.setObjectName("frame_11")
+        self.verticalLayout_5 = QtWidgets.QVBoxLayout(self.frame_11)
+        self.verticalLayout_5.setObjectName("verticalLayout_5")
+        self.label = QtWidgets.QLabel(self.frame_11)
+        self.label.setObjectName("label")
+        self.verticalLayout_5.addWidget(self.label)
+        self.edit_discord_webhook = QtWidgets.QLineEdit(self.frame_11)
+        self.edit_discord_webhook.setObjectName("edit_discord_webhook")
+        self.verticalLayout_5.addWidget(self.edit_discord_webhook)
+        self.horizontalLayout_6.addWidget(self.frame_11)
+        self.frame_12 = QtWidgets.QFrame(self.frame_5)
+        self.frame_12.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_12.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_12.setObjectName("frame_12")
+        self.verticalLayout_6 = QtWidgets.QVBoxLayout(self.frame_12)
+        self.verticalLayout_6.setObjectName("verticalLayout_6")
+        self.check_send_logs = QtWidgets.QCheckBox(self.frame_12)
+        self.check_send_logs.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.check_send_logs.setChecked(True)
+        self.check_send_logs.setObjectName("check_send_logs")
+        self.verticalLayout_6.addWidget(self.check_send_logs)
+        self.btn_submit = QtWidgets.QPushButton(self.frame_12)
+        self.btn_submit.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.btn_submit.setObjectName("btn_submit")
+        self.verticalLayout_6.addWidget(self.btn_submit)
+        self.horizontalLayout_6.addWidget(self.frame_12)
         self.verticalLayout.addWidget(self.frame_5)
         self.frame_2 = QtWidgets.QFrame(self.centralwidget)
         self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_2.setObjectName("frame_2")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.frame_2)
+        self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout.setObjectName("horizontalLayout")
-        self.label = QtWidgets.QLabel(self.frame_2)
-        self.label.setObjectName("label")
-        self.horizontalLayout.addWidget(self.label)
-        self.edit_discord_webhook = QtWidgets.QLineEdit(self.frame_2)
-        self.edit_discord_webhook.setObjectName("edit_discord_webhook")
-        self.horizontalLayout.addWidget(self.edit_discord_webhook)
-        self.check_send_logs = QtWidgets.QCheckBox(self.frame_2)
-        self.check_send_logs.setChecked(True)
-        self.check_send_logs.setObjectName("check_send_logs")
-        self.horizontalLayout.addWidget(self.check_send_logs)
-        self.verticalLayout.addWidget(self.frame_2)
-        self.groupBox_3 = QtWidgets.QGroupBox(self.centralwidget)
-        self.groupBox_3.setObjectName("groupBox_3")
-        self.horizontalLayout_7 = QtWidgets.QHBoxLayout(self.groupBox_3)
-        self.horizontalLayout_7.setObjectName("horizontalLayout_7")
-        self.groupBox = QtWidgets.QGroupBox(self.groupBox_3)
+        self.groupBox = QtWidgets.QGroupBox(self.frame_2)
         self.groupBox.setObjectName("groupBox")
         self.horizontalLayout_5 = QtWidgets.QHBoxLayout(self.groupBox)
         self.horizontalLayout_5.setObjectName("horizontalLayout_5")
@@ -91,6 +192,7 @@ class Ui_MainWindow(object):
         self.label_4.setObjectName("label_4")
         self.horizontalLayout_5.addWidget(self.label_4)
         self.line_overworld_x = QtWidgets.QDoubleSpinBox(self.groupBox)
+        self.line_overworld_x.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.line_overworld_x.setMinimum(-999999.0)
         self.line_overworld_x.setMaximum(999999.0)
         self.line_overworld_x.setObjectName("line_overworld_x")
@@ -99,14 +201,15 @@ class Ui_MainWindow(object):
         self.label_5.setObjectName("label_5")
         self.horizontalLayout_5.addWidget(self.label_5)
         self.line_overworld_z = QtWidgets.QDoubleSpinBox(self.groupBox)
+        self.line_overworld_z.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.line_overworld_z.setMinimum(-999999.0)
         self.line_overworld_z.setMaximum(999999.0)
         self.line_overworld_z.setObjectName("line_overworld_z")
         self.horizontalLayout_5.addWidget(self.line_overworld_z)
         self.horizontalLayout_5.setStretch(1, 50)
         self.horizontalLayout_5.setStretch(3, 50)
-        self.horizontalLayout_7.addWidget(self.groupBox)
-        self.groupBox_2 = QtWidgets.QGroupBox(self.groupBox_3)
+        self.horizontalLayout.addWidget(self.groupBox)
+        self.groupBox_2 = QtWidgets.QGroupBox(self.frame_2)
         self.groupBox_2.setObjectName("groupBox_2")
         self.horizontalLayout_4 = QtWidgets.QHBoxLayout(self.groupBox_2)
         self.horizontalLayout_4.setObjectName("horizontalLayout_4")
@@ -114,6 +217,7 @@ class Ui_MainWindow(object):
         self.label_6.setObjectName("label_6")
         self.horizontalLayout_4.addWidget(self.label_6)
         self.line_nether_x = QtWidgets.QDoubleSpinBox(self.groupBox_2)
+        self.line_nether_x.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.line_nether_x.setMinimum(-999999.0)
         self.line_nether_x.setMaximum(999999.0)
         self.line_nether_x.setObjectName("line_nether_x")
@@ -122,37 +226,81 @@ class Ui_MainWindow(object):
         self.label_7.setObjectName("label_7")
         self.horizontalLayout_4.addWidget(self.label_7)
         self.line_nether_z = QtWidgets.QDoubleSpinBox(self.groupBox_2)
+        self.line_nether_z.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.line_nether_z.setMinimum(-999999.0)
         self.line_nether_z.setMaximum(999999.0)
         self.line_nether_z.setObjectName("line_nether_z")
         self.horizontalLayout_4.addWidget(self.line_nether_z)
         self.horizontalLayout_4.setStretch(1, 50)
         self.horizontalLayout_4.setStretch(3, 50)
-        self.horizontalLayout_7.addWidget(self.groupBox_2)
-        self.verticalLayout.addWidget(self.groupBox_3)
+        self.horizontalLayout.addWidget(self.groupBox_2)
+        self.verticalLayout.addWidget(self.frame_2)
         self.frame_4 = QtWidgets.QFrame(self.centralwidget)
         self.frame_4.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_4.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_4.setObjectName("frame_4")
-        self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.frame_4)
-        self.verticalLayout_2.setObjectName("verticalLayout_2")
-        self.frame_3 = QtWidgets.QFrame(self.frame_4)
+        self.horizontalLayout_8 = QtWidgets.QHBoxLayout(self.frame_4)
+        self.horizontalLayout_8.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_8.setSpacing(0)
+        self.horizontalLayout_8.setObjectName("horizontalLayout_8")
+        self.frame_6 = QtWidgets.QFrame(self.frame_4)
+        self.frame_6.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_6.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_6.setObjectName("frame_6")
+        self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.frame_6)
+        self.verticalLayout_3.setObjectName("verticalLayout_3")
+        self.frame_3 = QtWidgets.QFrame(self.frame_6)
         self.frame_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_3.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_3.setObjectName("frame_3")
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.frame_3)
+        self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
-        self.label_8 = QtWidgets.QLabel(self.frame_3)
-        self.label_8.setObjectName("label_8")
-        self.horizontalLayout_2.addWidget(self.label_8)
+        self.label_log = QtWidgets.QLabel(self.frame_3)
+        self.label_log.setObjectName("label_log")
+        self.horizontalLayout_2.addWidget(self.label_log)
         self.label_timestamp = QtWidgets.QLabel(self.frame_3)
         self.label_timestamp.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.label_timestamp.setObjectName("label_timestamp")
         self.horizontalLayout_2.addWidget(self.label_timestamp)
-        self.verticalLayout_2.addWidget(self.frame_3)
-        self.log = QtWidgets.QListWidget(self.frame_4)
+        self.verticalLayout_3.addWidget(self.frame_3)
+        self.log = QtWidgets.QListWidget(self.frame_6)
+        self.log.viewport().setProperty("cursor", QtGui.QCursor(QtCore.Qt.IBeamCursor))
+        self.log.setWordWrap(True)
         self.log.setObjectName("log")
-        self.verticalLayout_2.addWidget(self.log)
+        self.verticalLayout_3.addWidget(self.log)
+        self.verticalLayout_3.setStretch(1, 100)
+        self.horizontalLayout_8.addWidget(self.frame_6)
+        self.frame_7 = QtWidgets.QFrame(self.frame_4)
+        self.frame_7.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_7.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_7.setObjectName("frame_7")
+        self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.frame_7)
+        self.verticalLayout_2.setObjectName("verticalLayout_2")
+        self.frame_8 = QtWidgets.QFrame(self.frame_7)
+        self.frame_8.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_8.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_8.setObjectName("frame_8")
+        self.horizontalLayout_9 = QtWidgets.QHBoxLayout(self.frame_8)
+        self.horizontalLayout_9.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_9.setObjectName("horizontalLayout_9")
+        self.label_users = QtWidgets.QLabel(self.frame_8)
+        self.label_users.setObjectName("label_users")
+        self.horizontalLayout_9.addWidget(self.label_users)
+        self.label_timestamp_users = QtWidgets.QLabel(self.frame_8)
+        self.label_timestamp_users.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.label_timestamp_users.setObjectName("label_timestamp_users")
+        self.horizontalLayout_9.addWidget(self.label_timestamp_users)
+        self.verticalLayout_2.addWidget(self.frame_8)
+        self.frame_graph = PlotWidget(self.frame_7)
+        self.frame_graph.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_graph.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_graph.setObjectName("frame_graph")
+        self.verticalLayout_2.addWidget(self.frame_graph)
+        self.verticalLayout_2.setStretch(1, 100)
+        self.horizontalLayout_8.addWidget(self.frame_7)
+        self.horizontalLayout_8.setStretch(0, 50)
+        self.horizontalLayout_8.setStretch(1, 50)
         self.verticalLayout.addWidget(self.frame_4)
         MainWindow.setCentralWidget(self.centralwidget)
 
@@ -161,18 +309,21 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Minecraft Utility"))
         self.title.setText(_translate("MainWindow", "Minecraft Utility"))
         self.label_9.setText(_translate("MainWindow", "Server Address:"))
         self.label.setText(_translate("MainWindow", "Discord Webhook:"))
         self.check_send_logs.setText(_translate("MainWindow", "Send Logs"))
-        self.groupBox_3.setTitle(_translate("MainWindow", "Portal Calculator"))
-        self.groupBox.setTitle(_translate("MainWindow", "Overworld"))
+        self.btn_submit.setText(_translate("MainWindow", "Submit"))
+        self.groupBox.setTitle(_translate("MainWindow", " Overworld Portal"))
         self.label_4.setText(_translate("MainWindow", "X"))
         self.label_5.setText(_translate("MainWindow", "Z"))
-        self.groupBox_2.setTitle(_translate("MainWindow", "Nether"))
+        self.groupBox_2.setTitle(_translate("MainWindow", "Nether Portal"))
         self.label_6.setText(_translate("MainWindow", "X"))
         self.label_7.setText(_translate("MainWindow", "Z"))
-        self.label_8.setText(_translate("MainWindow", "Log"))
+        self.label_log.setText(_translate("MainWindow", "Logs"))
         self.label_timestamp.setText(_translate("MainWindow", "00:00:00pm"))
+        self.label_users.setText(_translate("MainWindow", "Players"))
+        self.label_timestamp_users.setText(_translate("MainWindow", "00:00:00pm"))
+from pyqtgraph import PlotWidget
 import resources_rc
